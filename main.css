@@ -60,6 +60,7 @@ p {
   margin-bottom: 10px;
   text-align: center;
   height: auto;
+  max-width: 20%;
 }
 
 #footer {
