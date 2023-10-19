@@ -53,10 +53,10 @@ p {
 
 
 .rightside_image {
-  float: right;
+  float: left;
   margin-top:0px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 0px;
+  margin-right: 15px;
   margin-bottom: 10px;
   text-align: center;
   height: auto;
