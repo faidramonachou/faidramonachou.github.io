@@ -138,38 +138,3 @@ ul {
     height: 40px;
 }
 
-/* Intro layout */
-.intro {
-  display: grid;
-  grid-template-columns: 1fr 280px;  /* text | image */
-  gap: 2rem;
-  align-items: start;
-  margin-top: 1.5rem;
-}
-
-/* Responsive image (no floats!) */
-.rightside_image {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 6px;
-  float: none !important;   /* override any old float rules */
-}
-
-/* Tighter paragraphs inside intro */
-.intro-text p { margin: 0 0 1rem; }
-
-/* Ensure News is below the intro */
-.news { margin-top: 2rem; }
-
-/* Mobile: stack text and image */
-@media (max-width: 800px) {
-  .intro {
-    grid-template-columns: 1fr;
-  }
-  .rightside_image {
-    max-width: 340px;        /* optional cap */
-    margin: 0 auto 1rem;     /* center on mobile */
-  }
-}
