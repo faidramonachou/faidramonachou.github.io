@@ -59,13 +59,14 @@ p {
 
 .rightside_image {
   float: left;
-  margin-top:0px;
-  margin-left: 0px;
+  margin-top: 0;
+  margin-left: 0;
   margin-right: 15px;
   margin-bottom: 10px;
-  text-align: center;
   height: auto;
-  max-width: 22%;
+  width: auto;
+  /* Headshot scale: cap width on large screens, shrink on narrow viewports */
+  max-width: min(220px, 40vw);
 }
 
 #footer {
