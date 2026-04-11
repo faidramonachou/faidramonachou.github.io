@@ -1,8 +1,9 @@
 body {
     margin: 0 auto;
-    max-width: 58rem;
+    /* ~928px: phones / small tablets; laptops use wider rules below */
+    max-width: 68rem;
     width: 100%;
-    padding: 3rem clamp(1rem, 4vw, 2.5rem) 4rem;
+    padding: 3rem clamp(1rem, 3vw, 2.25rem) 4rem;
 }
 a {
    text-decoration:none; 
@@ -128,6 +129,32 @@ p {
     color: #333;
 }
 
+/* Secondary lines under papers (venues, awards): indented block */
+.paper-note {
+    display: block;
+    margin: 0.45rem 0 0;
+    padding: 0.35rem 0 0.35rem 1.1rem;
+    margin-left: 0.15rem;
+    border-left: 3px solid #b0cce8;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 0.88em;
+    line-height: 1.5;
+    color: #4a5568;
+}
+
+.paper-note a {
+    color: #1560bd;
+}
+
+.paper-note-award {
+    color: #7a1b62;
+    border-left-color: #d9b3cf;
+}
+
+.paper-note-award b {
+    font-weight: 600;
+}
+
 
 .rightside_image {
   float: left;
@@ -195,11 +222,25 @@ ul {
         width: min(170px, 52vw);
         height: min(170px, 52vw);
     }
+
+    .paper-note {
+        margin-left: 0;
+        padding-left: 0.85rem;
+        border-left-width: 2px;
+    }
 }
 
-@media (min-width: 90rem) {
+/* ~13" laptops and up (≥1180px): use more of the width */
+@media (min-width: 73.75rem) {
     body {
-        max-width: 62rem;
+        max-width: 74rem;
+    }
+}
+
+/* Large / external monitors */
+@media (min-width: 100rem) {
+    body {
+        max-width: 78rem;
     }
 }
 
