@@ -20,6 +20,9 @@
     --award-magenta-border: #d94a9a;
     /* Cool off-white (blue-gray) page tint */
     --page-bg: #f4f7fb;
+    /* Horizontal gutters: end is larger so text/nav never clips at the window edge */
+    --pad-inline-start: clamp(1.25rem, 4vw, 2.5rem);
+    --pad-inline-end: clamp(1.75rem, 8vw, 4rem);
 }
 
 html {
@@ -32,11 +35,11 @@ body {
     width: 100%;
     padding-top: 3rem;
     padding-bottom: 4rem;
-    /* Extra space on the right so nav (e.g. CV) never sits flush against the edge */
-    padding-left: clamp(1.25rem, 4vw, 2.25rem);
-    padding-right: clamp(1.5rem, 6vw, 3rem);
+    padding-left: max(var(--pad-inline-start), env(safe-area-inset-left, 0px));
+    padding-right: max(var(--pad-inline-end), env(safe-area-inset-right, 0px));
     color: var(--text);
     background-color: var(--page-bg);
+    overflow-wrap: break-word;
 }
 
 a {
@@ -290,8 +293,8 @@ ul {
     body {
         padding-top: 1.75rem;
         padding-bottom: 3rem;
-        padding-left: clamp(1rem, 4vw, 1.5rem);
-        padding-right: clamp(1.25rem, 5vw, 2rem);
+        padding-left: max(clamp(1rem, 4vw, 1.75rem), env(safe-area-inset-left, 0px));
+        padding-right: max(clamp(1.5rem, 7vw, 2.75rem), env(safe-area-inset-right, 0px));
     }
 
     .site-header {
