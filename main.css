@@ -1,17 +1,44 @@
+:root {
+    --text: #2d333b;
+    --text-muted: #4a5568;
+    --link: #1560bd;
+    --link-hover-bg: #dbeaf8;
+    --accent-sky: #c5daf1;
+    --accent-sky-strong: #a8c8ec;
+    --accent-border: #cdd8e4;
+    --accent-nav-pill: #e8f2fc;
+    --accent-nav-active: #d1e6fc;
+    --accent-nav-active-hover: #c5def9;
+    --focus-ring: #2a6fbf;
+}
+
 body {
     margin: 0 auto;
     /* ~928px: phones / small tablets; laptops use wider rules below */
     max-width: 68rem;
     width: 100%;
     padding: 3rem clamp(1rem, 3vw, 2.25rem) 4rem;
+    color: var(--text);
 }
+
 a {
-   text-decoration:none; 
-   color: #1D76D4;
+    text-decoration: none;
+    color: var(--link);
 }
+
 a:hover {
-    background-color: #D1E6FC;
+    background-color: var(--link-hover-bg);
     text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+a:focus:not(:focus-visible) {
+    outline: none;
 }
 
 strong, b {
@@ -26,7 +53,7 @@ strong, b {
     gap: 1rem 2rem;
     margin-bottom: 1.75rem;
     padding-bottom: 1.1rem;
-    border-bottom: 1px solid #dde3ea;
+    border-bottom: 1px solid var(--accent-border);
 }
 
 .site-title {
@@ -38,15 +65,19 @@ strong, b {
 }
 
 .site-title a {
-    color: #222;
+    color: var(--text);
     text-decoration: none;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 65%, #C1D9F1 65%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 62%, var(--accent-sky) 62%);
     display: inline;
 }
 
 .site-title a:hover {
     text-decoration: none;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 65%, #b8d4ee 65%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 62%, var(--accent-sky-strong) 62%);
+}
+
+.site-title a:focus-visible {
+    border-radius: 4px;
 }
 
 .site-nav ul {
@@ -65,94 +96,127 @@ strong, b {
 
 .site-nav a {
     display: inline-block;
-    color: #1D76D4;
+    color: var(--link);
     padding: 0.5em 1.1em;
     border-radius: 6px;
     text-decoration: none;
 }
 
 .site-nav a:hover {
-    background-color: #e8f2fc;
+    background-color: var(--accent-nav-pill);
     text-decoration: none;
+}
+
+.site-nav a:focus-visible {
+    outline-offset: 3px;
 }
 
 .site-nav a.active {
     font-weight: 700;
     color: #0d4a8f;
-    background-color: #d1e6fc;
+    background-color: var(--accent-nav-active);
     text-decoration: none;
 }
 
 .site-nav a.active:hover {
-    background-color: #c5def9;
+    background-color: var(--accent-nav-active-hover);
     text-decoration: none;
 }
 
 h1 {
     font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-    font-size: 30px;
+    font-size: 1.875rem;
     font-style: normal;
     font-variant: normal;
     font-weight: bold;
-    line-height: 1.2;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 65%, #C1D9F1 65%);
+    line-height: 1.25;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 62%, var(--accent-sky) 62%);
     display: inline;
 }
 
+/* Section titles (News, Working papers, …): one step up from body, not oversized */
 h3 {
-    font-size: 1.7em;
-    font-family:"Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-    background: linear-gradient(180deg, rgba(255,255,255,0) 65%, #C1D9F1 65%);
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.3;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 62%, var(--accent-sky) 62%);
     display: inline;
+    color: var(--text);
+    letter-spacing: -0.02em;
 }
 
 h4 {
-    font-size: 1.4em;
-    font-family:"Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-    background-color: #D1E6FC;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    background-color: var(--accent-nav-active);
     display: inline;
+    color: var(--text);
 }
 
 h5 {
-    font-size: 1.7em;
+    font-size: 1.35rem;
+    line-height: 1.3;
     text-decoration: none;
-    color: #1D76D4;
-    font-family:"Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    color: var(--link);
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
     display: inline;
 }
 
 p {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    font-weight: lighter;
-    font-size: 1.2em;
-    line-height: 1.2em;
-    color: #333;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.52;
+    color: var(--text);
+    max-width: 68ch;
 }
 
-/* Secondary lines under papers (venues, awards): indented block */
+/* Photo row: let float layout use full content width */
+p:has(.rightside_image) {
+    max-width: none;
+}
+
+code.language-plaintext {
+    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    font-weight: 500;
+    background: #eef2f6;
+    color: var(--text);
+    padding: 0.15em 0.45em;
+    border-radius: 4px;
+    border: 1px solid var(--accent-border);
+}
+
+/* Secondary lines under papers: quiet, tight; titles stay primary */
 .paper-note {
     display: block;
-    margin: 0.45rem 0 0;
-    padding: 0.35rem 0 0.35rem 1.1rem;
-    margin-left: 0.15rem;
-    border-left: 3px solid #b0cce8;
+    margin: 0.2rem 0 0;
+    padding: 0.15rem 0 0.15rem 0.85rem;
+    margin-left: 0.1rem;
+    border-left: 2px solid #e0e8f0;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    font-size: 0.88em;
-    line-height: 1.5;
-    color: #4a5568;
+    font-size: 0.8em;
+    line-height: 1.28;
+    color: #6e7782;
 }
 
 .paper-note a {
-    color: #1560bd;
+    color: #4a6fa8;
+}
+
+.paper-note a:hover {
+    color: var(--link);
 }
 
 .paper-note-award {
-    color: #7a1b62;
-    border-left-color: #d9b3cf;
+    color: #7d6a78;
+    border-left-color: #e8dde4;
 }
 
 .paper-note-award b {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 
@@ -183,14 +247,18 @@ p {
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    font-weight: lighter;
-    font-size: 1em;
-    line-height: 1.4em;
-    color: #333;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.52;
+    color: var(--text);
+}
+
+ul p {
+    max-width: none;
 }
 
 @media (max-width: 36rem) {
@@ -225,7 +293,7 @@ ul {
 
     .paper-note {
         margin-left: 0;
-        padding-left: 0.85rem;
+        padding-left: 0.75rem;
         border-left-width: 2px;
     }
 }
