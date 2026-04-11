@@ -10,14 +10,15 @@
     --accent-nav-active: #d1e6fc;
     --accent-nav-active-hover: #c5def9;
     --focus-ring: #2a6fbf;
+    --award-magenta: #a81472;
+    --award-magenta-border: #d94a9a;
 }
 
 body {
     margin: 0 auto;
-    /* ~928px: phones / small tablets; laptops use wider rules below */
-    max-width: 68rem;
+    max-width: 82rem;
     width: 100%;
-    padding: 3rem clamp(1rem, 3vw, 2.25rem) 4rem;
+    padding: 3rem clamp(1rem, 2.5vw, 1.75rem) 4rem;
     color: var(--text);
 }
 
@@ -170,12 +171,6 @@ p {
     font-size: 1.125rem;
     line-height: 1.52;
     color: var(--text);
-    max-width: 68ch;
-}
-
-/* Photo row: let float layout use full content width */
-p:has(.rightside_image) {
-    max-width: none;
 }
 
 code.language-plaintext {
@@ -211,12 +206,20 @@ code.language-plaintext {
 }
 
 .paper-note-award {
-    color: #7d6a78;
-    border-left-color: #e8dde4;
+    color: var(--award-magenta);
+    border-left-color: var(--award-magenta-border);
 }
 
 .paper-note-award b {
-    font-weight: 500;
+    font-weight: 700;
+}
+
+.paper-note-award a {
+    color: #951063;
+}
+
+.paper-note-award a:hover {
+    color: #7a0d52;
 }
 
 
@@ -257,10 +260,6 @@ ul {
     color: var(--text);
 }
 
-ul p {
-    max-width: none;
-}
-
 @media (max-width: 36rem) {
     body {
         padding-top: 1.75rem;
@@ -298,17 +297,17 @@ ul p {
     }
 }
 
-/* ~13" laptops and up (≥1180px): use more of the width */
+/* Laptops and up */
 @media (min-width: 73.75rem) {
     body {
-        max-width: 74rem;
+        max-width: 90rem;
     }
 }
 
 /* Large / external monitors */
 @media (min-width: 100rem) {
     body {
-        max-width: 78rem;
+        max-width: 104rem;
     }
 }
 
