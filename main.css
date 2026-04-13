@@ -16,11 +16,15 @@
     --accent-nav-active: #d1e6fc;
     --accent-nav-active-hover: #c5def9;
     --focus-ring: #2a6fbf;
-    /* Paper meta lines: venue/conference, media (indigo); awards use venue colors */
+    /* Paper meta lines: venue/conference (slate); awards (magenta) */
     --note-venue-fg: #455d6e;
     --note-venue-border: #7fa3b8;
     --note-venue-link: #2a5f7a;
-    /* Media: cool indigo (not bronze); pairs with slate venue + magenta awards */
+    --note-award-fg: #6b214d;
+    --note-award-border: #c24f8f;
+    --note-award-link: #8b2864;
+    --note-award-bg: rgba(170, 50, 120, 0.09);
+    /* Media: cool indigo */
     --note-media-fg: #3f4a63;
     --note-media-border: #7a8fc4;
     --note-media-link: #2d4a8f;
@@ -247,30 +251,35 @@ p {
     color: var(--link);
 }
 
-/* Awards: same slate as venue notes; emphasis from <b> only (no magenta wash) */
+/* Awards: magenta accent */
 .paper-note-award {
-    color: var(--note-venue-fg);
-    border-left-color: var(--note-venue-border);
+    color: var(--note-award-fg);
+    border-left-color: var(--note-award-border);
+    background-color: var(--note-award-bg);
+    padding-left: 0.75rem;
+    margin-left: 0;
+    border-radius: 0 3px 3px 0;
 }
 
 .paper-note-award b {
     font-weight: 700;
+    color: var(--note-award-fg);
 }
 
 .paper-note-award a {
-    color: var(--note-venue-link);
+    color: var(--note-award-link);
 }
 
 .paper-note-award a:hover {
     color: var(--link);
 }
 
-/* Bracket links after venue lines ([preprint], [AI Matters], etc.) — match body text */
+/* Bracket links after venue lines ([preprint], [journal], etc.) — slightly smaller than body */
 .paper-link-tags {
     display: block;
     margin-top: 0.15rem;
-    font-size: inherit;
-    line-height: inherit;
+    font-size: 0.9em;
+    line-height: 1.42;
 }
 
 .media-page {
@@ -278,7 +287,7 @@ p {
 }
 
 .media-page .media-page-intro {
-    margin-top: 0.55rem;
+    margin-top: 1.1rem;
     margin-bottom: 1.35rem;
     color: var(--text-muted);
     font-size: 1.05rem;
@@ -386,11 +395,11 @@ p {
     border-bottom: 2px solid var(--accent-sky-strong);
     background: none;
     background-color: transparent;
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-    font-size: 1.35rem;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 1.2rem;
     font-weight: 700;
-    line-height: 1.25;
-    letter-spacing: -0.02em;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
     color: var(--text);
 }
 
@@ -438,6 +447,29 @@ p {
     color: var(--text-muted);
     margin-left: auto;
     text-align: right;
+}
+
+.teaching-page ul.teaching-list li.teaching-list-item--tutorial {
+    display: block;
+}
+
+.teaching-page .teaching-tutorial-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.25rem 1rem;
+}
+
+.teaching-page .teaching-tutorial-head .teaching-dates {
+    flex-shrink: 0;
+}
+
+.teaching-page .teaching-tutorial-sub {
+    margin-top: 0.35rem;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    line-height: 1.45;
+    color: var(--text-muted);
 }
 
 .rightside_image {
