@@ -16,11 +16,12 @@
     --accent-nav-active: #d1e6fc;
     --accent-nav-active-hover: #c5def9;
     --focus-ring: #2a6fbf;
-    /* Paper meta lines: venue/conference (slate); award lines use magenta text */
+    /* Paper meta lines: venue (slate), media (indigo), awards (magenta) — same block layout */
     --note-venue-fg: #455d6e;
     --note-venue-border: #7fa3b8;
     --note-venue-link: #2a5f7a;
     --note-award-fg: #a31d72;
+    --note-award-border: #c75b96;
     --note-award-link: #7d1858;
     /* Media: cool indigo */
     --note-media-fg: #3f4a63;
@@ -31,6 +32,8 @@
     /* Horizontal gutters: end is larger so text/nav never clips at the window edge */
     --pad-inline-start: clamp(1.25rem, 4vw, 2.5rem);
     --pad-inline-end: clamp(1.75rem, 8vw, 4rem);
+    /* Nav tabs: same scholarly serif as body (not UI sans) */
+    --font-nav: "Palatino Linotype", "Book Antiqua", Palatino, "Georgia Pro", Georgia, serif;
 }
 
 html {
@@ -126,10 +129,11 @@ strong, b {
     margin: 0;
     padding: 0;
     max-width: 100%;
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-    font-size: 1.2rem;
-    font-weight: 500;
-    line-height: 1.2;
+    font-family: var(--font-nav);
+    font-size: 1.08rem;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
 }
 
 .site-nav a {
@@ -249,14 +253,10 @@ p {
     color: var(--link);
 }
 
-/* Awards: magenta text only — no left rule/padding (avoids any “wash” or stripe read) */
+/* Awards: same layout as venue notes; magenta text + left rule (like media uses indigo) */
 .paper-note-award {
     color: var(--note-award-fg);
-    background: none;
-    background-color: transparent;
-    border-left: none;
-    padding-left: 0;
-    margin-left: 0;
+    border-left-color: var(--note-award-border);
 }
 
 .paper-note-award b {
@@ -554,12 +554,6 @@ ul {
         margin-left: 0;
         padding-left: 0.75rem;
         border-left-width: 2px;
-    }
-
-    .paper-note.paper-note-award {
-        padding-left: 0;
-        margin-left: 0;
-        border-left: none;
     }
 }
 
