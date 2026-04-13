@@ -20,8 +20,8 @@
     --note-venue-fg: #455d6e;
     --note-venue-border: #7fa3b8;
     --note-venue-link: #2a5f7a;
-    --note-award-fg: #6b214d;
-    --note-award-link: #8b2864;
+    --note-award-fg: #a31d72;
+    --note-award-link: #7d1858;
     /* Media: cool indigo */
     --note-media-fg: #3f4a63;
     --note-media-border: #7a8fc4;
@@ -249,9 +249,14 @@ p {
     color: var(--link);
 }
 
-/* Awards: magenta text only (same note chrome as venue lines) */
+/* Awards: magenta text only — no left rule/padding (avoids any “wash” or stripe read) */
 .paper-note-award {
     color: var(--note-award-fg);
+    background: none;
+    background-color: transparent;
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .paper-note-award b {
@@ -549,6 +554,12 @@ ul {
         margin-left: 0;
         padding-left: 0.75rem;
         border-left-width: 2px;
+    }
+
+    .paper-note.paper-note-award {
+        padding-left: 0;
+        margin-left: 0;
+        border-left: none;
     }
 }
 
