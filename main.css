@@ -16,8 +16,16 @@
     --accent-nav-active: #d1e6fc;
     --accent-nav-active-hover: #c5def9;
     --focus-ring: #2a6fbf;
-    --award-magenta: #a81472;
-    --award-magenta-border: #d94a9a;
+    /* Paper meta lines: awards (magenta) → venue/conference → media */
+    --award-magenta: #b01074;
+    --award-magenta-border: #e85aab;
+    --note-venue-fg: #455d6e;
+    --note-venue-border: #7fa3b8;
+    --note-venue-link: #2a5f7a;
+    /* Media: cool indigo (not bronze); pairs with slate venue + magenta awards */
+    --note-media-fg: #3f4a63;
+    --note-media-border: #7a8fc4;
+    --note-media-link: #2d4a8f;
     /* Cool off-white (blue-gray) page tint */
     --page-bg: #f4f7fb;
     /* Horizontal gutters: end is larger so text/nav never clips at the window edge */
@@ -202,30 +210,44 @@ p {
     color: var(--text);
 }
 
-/* Secondary lines under papers: quiet, tight; titles stay primary */
+/* Secondary lines: default = venue/conference (cool slate); add .paper-note-media or .paper-note-award */
 .paper-note {
     display: block;
     margin: 0.2rem 0 0;
     padding: 0.15rem 0 0.15rem 0.85rem;
     margin-left: 0.1rem;
-    border-left: 2px solid #e0e8f0;
+    border-left: 2px solid var(--note-venue-border);
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 0.8em;
     line-height: 1.28;
-    color: #6e7782;
+    color: var(--note-venue-fg);
 }
 
 .paper-note a {
-    color: #4a6fa8;
+    color: var(--note-venue-link);
 }
 
 .paper-note a:hover {
     color: var(--link);
 }
 
+.paper-note-media {
+    color: var(--note-media-fg);
+    border-left-color: var(--note-media-border);
+}
+
+.paper-note-media a {
+    color: var(--note-media-link);
+}
+
+.paper-note-media a:hover {
+    color: var(--link);
+}
+
 .paper-note-award {
     color: var(--award-magenta);
     border-left-color: var(--award-magenta-border);
+    background: linear-gradient(90deg, rgba(176, 16, 116, 0.07), transparent);
 }
 
 .paper-note-award b {
@@ -233,11 +255,11 @@ p {
 }
 
 .paper-note-award a {
-    color: #951063;
+    color: #9a0f5c;
 }
 
 .paper-note-award a:hover {
-    color: #7a0d52;
+    color: #7a0c4a;
 }
 
 
