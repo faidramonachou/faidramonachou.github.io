@@ -265,7 +265,7 @@ p {
     color: var(--link);
 }
 
-/* Bracket links after venue lines ([preprint], [AI Matters version], etc.) — match body text */
+/* Bracket links after venue lines ([preprint], [AI Matters], etc.) — match body text */
 .paper-link-tags {
     display: block;
     margin-top: 0.15rem;
@@ -278,7 +278,7 @@ p {
 }
 
 .media-page .media-page-intro {
-    margin-top: -0.35rem;
+    margin-top: 0.55rem;
     margin-bottom: 1.35rem;
     color: var(--text-muted);
     font-size: 1.05rem;
@@ -398,20 +398,6 @@ p {
     margin-top: 0.85rem;
 }
 
-.teaching-page .teaching-section-title {
-    display: block;
-    margin: 1.65rem 0 0.5rem;
-    padding-bottom: 0.3rem;
-    border-bottom: 1px solid var(--accent-border);
-    background: none;
-    background-color: transparent;
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-    font-size: 1.15rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    color: var(--text);
-}
-
 .teaching-page .teaching-role {
     margin: 0 0 0.5rem;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -452,43 +438,6 @@ p {
     color: var(--text-muted);
     margin-left: auto;
     text-align: right;
-}
-
-.teaching-page .teaching-tutorial-block {
-    margin-top: 1.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--accent-border);
-}
-
-.teaching-page .teaching-invited {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 0.5rem 1rem;
-    margin: 0 0 0.35rem;
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-    font-weight: 700;
-    color: var(--text);
-}
-
-.teaching-page .teaching-invited .teaching-dates {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    font-style: italic;
-    font-weight: 400;
-    color: var(--text-muted);
-    margin-left: auto;
-}
-
-.teaching-page .teaching-tutorial-title {
-    margin: 0;
-    padding-left: 0.5rem;
-    border-left: 3px solid var(--accent-sky-strong);
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    font-size: 1.05rem;
-    font-style: italic;
-    line-height: 1.45;
-    color: var(--text-muted);
 }
 
 .rightside_image {
