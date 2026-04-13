@@ -16,17 +16,17 @@
     --accent-nav-active: #d1e6fc;
     --accent-nav-active-hover: #c5def9;
     --focus-ring: #2a6fbf;
-    /* Paper meta lines: venue (slate), media (indigo), awards (magenta) — same block layout */
-    --note-venue-fg: #455d6e;
-    --note-venue-border: #7fa3b8;
-    --note-venue-link: #2a5f7a;
+    /* Paper meta lines: venue (teal-sage), media (blue), awards (magenta) — same block layout */
+    --note-venue-fg: #3d5249;
+    --note-venue-border: #6fa894;
+    --note-venue-link: #256b52;
     --note-award-fg: #a31d72;
     --note-award-border: #c75b96;
     --note-award-link: #7d1858;
-    /* Media: cool indigo */
-    --note-media-fg: #3f4a63;
-    --note-media-border: #7a8fc4;
-    --note-media-link: #2d4a8f;
+    /* Media: stronger blue (Research page “Media:” lines) */
+    --note-media-fg: #2a4570;
+    --note-media-border: #4d86d6;
+    --note-media-link: #1454b8;
     /* Cool off-white (blue-gray) page tint */
     --page-bg: #f4f7fb;
     /* Horizontal gutters: end is larger so text/nav never clips at the window edge */
