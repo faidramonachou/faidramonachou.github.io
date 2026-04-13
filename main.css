@@ -16,14 +16,12 @@
     --accent-nav-active: #d1e6fc;
     --accent-nav-active-hover: #c5def9;
     --focus-ring: #2a6fbf;
-    /* Paper meta lines: venue/conference (slate); awards (magenta) */
+    /* Paper meta lines: venue/conference (slate); award lines use magenta text */
     --note-venue-fg: #455d6e;
     --note-venue-border: #7fa3b8;
     --note-venue-link: #2a5f7a;
     --note-award-fg: #6b214d;
-    --note-award-border: #c24f8f;
     --note-award-link: #8b2864;
-    --note-award-bg: rgba(170, 50, 120, 0.09);
     /* Media: cool indigo */
     --note-media-fg: #3f4a63;
     --note-media-border: #7a8fc4;
@@ -251,14 +249,9 @@ p {
     color: var(--link);
 }
 
-/* Awards: magenta accent */
+/* Awards: magenta text only (same note chrome as venue lines) */
 .paper-note-award {
     color: var(--note-award-fg);
-    border-left-color: var(--note-award-border);
-    background-color: var(--note-award-bg);
-    padding-left: 0.75rem;
-    margin-left: 0;
-    border-radius: 0 3px 3px 0;
 }
 
 .paper-note-award b {
