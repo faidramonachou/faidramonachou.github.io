@@ -16,9 +16,7 @@
     --accent-nav-active: #d1e6fc;
     --accent-nav-active-hover: #c5def9;
     --focus-ring: #2a6fbf;
-    /* Paper meta lines: awards (magenta) → venue/conference → media */
-    --award-magenta: #b01074;
-    --award-magenta-border: #e85aab;
+    /* Paper meta lines: venue/conference, media (indigo); awards use venue colors */
     --note-venue-fg: #455d6e;
     --note-venue-border: #7fa3b8;
     --note-venue-link: #2a5f7a;
@@ -249,10 +247,10 @@ p {
     color: var(--link);
 }
 
+/* Awards: same slate as venue notes; emphasis from <b> only (no magenta wash) */
 .paper-note-award {
-    color: var(--award-magenta);
-    border-left-color: var(--award-magenta-border);
-    background: linear-gradient(90deg, rgba(176, 16, 116, 0.07), transparent);
+    color: var(--note-venue-fg);
+    border-left-color: var(--note-venue-border);
 }
 
 .paper-note-award b {
@@ -260,52 +258,179 @@ p {
 }
 
 .paper-note-award a {
-    color: #9a0f5c;
+    color: var(--note-venue-link);
 }
 
 .paper-note-award a:hover {
-    color: #7a0c4a;
+    color: var(--link);
+}
+
+/* Bracket links after venue lines ([preprint], [AI Matters version], etc.) — match body text */
+.paper-link-tags {
+    display: block;
+    margin-top: 0.15rem;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.media-page {
+    max-width: 46rem;
 }
 
 .media-page .media-page-intro {
     margin-top: -0.35rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.35rem;
     color: var(--text-muted);
     font-size: 1.05rem;
 }
 
-.media-page > ul {
-    margin: 0.25rem 0 1.5rem;
+.media-page .media-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.media-page > ul > li {
-    margin: 0 0 0.65rem;
-    padding-left: 0.85rem;
-    border-left: 2px solid var(--note-media-border);
+.media-page .media-item {
+    padding: 0.95rem 0;
+    border-bottom: 1px solid var(--accent-border);
 }
 
-.teaching-page .teaching-institution {
-    margin: 1.35rem 0 0.25rem;
+.media-page .media-item:first-child {
+    padding-top: 0.15rem;
+}
+
+.media-page .media-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0.25rem;
+}
+
+.media-page .media-item-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.35rem 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.media-page .media-outlet {
     font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-    font-size: 1.2rem;
+    font-size: 0.82rem;
     font-weight: 700;
-    color: var(--text);
+    letter-spacing: 0.02em;
+    color: var(--note-media-fg);
 }
 
-.teaching-page .teaching-institution:first-of-type {
-    margin-top: 0.5rem;
+.media-page .media-outlet a {
+    color: var(--note-media-link);
+    text-decoration: none;
+    font-weight: 700;
 }
 
-.teaching-page .teaching-role {
-    margin: 0.2rem 0 0.45rem;
+.media-page .media-outlet a:hover {
+    color: var(--link);
+    text-decoration: underline;
+}
+
+.media-page .media-detail {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
     font-style: italic;
     color: var(--text-muted);
 }
 
+.media-page .media-date {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 0.92rem;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.media-page .media-headline {
+    display: block;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 1.08rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.45;
+    color: var(--link);
+    text-decoration: none;
+    padding-left: 0.55rem;
+    border-left: 3px solid var(--note-media-border);
+}
+
+.media-page .media-headline:hover {
+    color: var(--link);
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.media-page .media-headline .media-detail {
+    font-style: italic;
+    color: var(--text-muted);
+}
+
+.teaching-page {
+    max-width: 48rem;
+}
+
+.teaching-page .teaching-school-title {
+    display: block;
+    margin: 1.85rem 0 0.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--accent-sky-strong);
+    background: none;
+    background-color: transparent;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+.teaching-page .teaching-school-title:first-of-type {
+    margin-top: 0.85rem;
+}
+
+.teaching-page .teaching-section-title {
+    display: block;
+    margin: 1.65rem 0 0.5rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--accent-border);
+    background: none;
+    background-color: transparent;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+.teaching-page .teaching-role {
+    margin: 0 0 0.5rem;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+}
+
+.teaching-page .teaching-role em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--text);
+}
+
 .teaching-page ul.teaching-list {
-    margin: 0 0 1.1rem;
-    padding-left: 1.25rem;
+    margin: 0 0 1.25rem;
+    padding: 0.15rem 0 0.35rem 1.1rem;
     list-style-type: disc;
+    border-left: 2px solid var(--accent-sky);
+    margin-left: 0.15rem;
 }
 
 .teaching-page ul.teaching-list li {
@@ -314,8 +439,12 @@ p {
     justify-content: space-between;
     align-items: baseline;
     gap: 0.25rem 1rem;
-    margin: 0 0 0.4rem;
-    padding-left: 0.15rem;
+    margin: 0 0 0.45rem;
+    padding-left: 0.25rem;
+}
+
+.teaching-page ul.teaching-list li:last-child {
+    margin-bottom: 0;
 }
 
 .teaching-page ul.teaching-list .teaching-dates {
@@ -325,11 +454,10 @@ p {
     text-align: right;
 }
 
-.teaching-page .teaching-subhead {
-    margin: 1rem 0 0.35rem;
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-    font-size: 1.05rem;
-    font-weight: 700;
+.teaching-page .teaching-tutorial-block {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--accent-border);
 }
 
 .teaching-page .teaching-invited {
@@ -338,11 +466,14 @@ p {
     justify-content: space-between;
     align-items: baseline;
     gap: 0.5rem 1rem;
-    margin: 1.25rem 0 0.35rem;
+    margin: 0 0 0.35rem;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
     font-weight: 700;
+    color: var(--text);
 }
 
 .teaching-page .teaching-invited .teaching-dates {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-style: italic;
     font-weight: 400;
     color: var(--text-muted);
@@ -350,8 +481,13 @@ p {
 }
 
 .teaching-page .teaching-tutorial-title {
-    margin: 0.15rem 0 0;
+    margin: 0;
+    padding-left: 0.5rem;
+    border-left: 3px solid var(--accent-sky-strong);
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 1.05rem;
     font-style: italic;
+    line-height: 1.45;
     color: var(--text-muted);
 }
 
