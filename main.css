@@ -236,6 +236,11 @@ p {
     border-left-color: var(--note-media-border);
 }
 
+.paper-note-media::before {
+    content: "Media: ";
+    font-weight: 700;
+}
+
 .paper-note-media a {
     color: var(--note-media-link);
 }
@@ -262,6 +267,32 @@ p {
     color: #7a0c4a;
 }
 
+.media-page .media-page-intro {
+    margin-top: -0.35rem;
+    margin-bottom: 1.25rem;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+.media-page > ul {
+    margin: 0.25rem 0 1.5rem;
+}
+
+.media-page > ul > li {
+    margin: 0 0 0.65rem;
+    padding-left: 0.85rem;
+    border-left: 2px solid var(--note-media-border);
+}
+
+.media-page h3[id] {
+    display: block;
+    margin-top: 1.35rem;
+    margin-bottom: 0.35rem;
+}
+
+.media-page h3[id] a {
+    color: var(--link);
+}
 
 .rightside_image {
   float: left;
