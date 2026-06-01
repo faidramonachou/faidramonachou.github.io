@@ -33,7 +33,8 @@
     --pad-inline-start: clamp(1.25rem, 4vw, 2.5rem);
     --pad-inline-end: clamp(1.75rem, 8vw, 4rem);
     /* Nav tabs: same scholarly serif as body (not UI sans) */
-    --font-nav: "Palatino Linotype", "Book Antiqua", Palatino, "Georgia Pro", Georgia, serif;
+    --font-serif: "Palatino Linotype", "Book Antiqua", Palatino, "Georgia Pro", Georgia, serif;
+    --font-nav: var(--font-serif);
 }
 
 html {
@@ -97,7 +98,7 @@ strong, b {
 
 .site-title {
     margin: 0;
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-family: var(--font-serif);
     font-size: clamp(1.35rem, 3.5vw, 1.875rem);
     font-weight: bold;
     line-height: 1.2;
@@ -166,7 +167,7 @@ strong, b {
 }
 
 h1 {
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-family: var(--font-serif);
     font-size: 1.875rem;
     font-style: normal;
     font-variant: normal;
@@ -181,7 +182,7 @@ h3 {
     font-size: 1.35rem;
     font-weight: 700;
     line-height: 1.3;
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-family: var(--font-serif);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 62%, var(--accent-sky) 62%);
     display: inline;
     color: var(--text);
@@ -191,7 +192,7 @@ h3 {
 h4 {
     font-size: 1.25rem;
     line-height: 1.3;
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-family: var(--font-serif);
     background-color: var(--accent-nav-active);
     display: inline;
     color: var(--text);
@@ -202,12 +203,12 @@ h5 {
     line-height: 1.3;
     text-decoration: none;
     color: var(--link);
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-family: var(--font-serif);
     display: inline;
 }
 
 p {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: var(--font-serif);
     font-weight: 400;
     font-size: 1.18rem;
     line-height: 1.58;
@@ -221,7 +222,7 @@ p {
     padding: 0.15rem 0 0.15rem 0.85rem;
     margin-left: 0.1rem;
     border-left: 2px solid var(--note-venue-border);
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: var(--font-serif);
     font-size: 0.9em;
     line-height: 1.34;
     color: var(--note-venue-fg);
@@ -321,7 +322,7 @@ p {
 }
 
 .media-page .media-outlet {
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+    font-family: var(--font-serif);
     font-size: 0.95rem;
     font-weight: 700;
     letter-spacing: 0.02em;
@@ -340,7 +341,7 @@ p {
 }
 
 .media-page .media-detail {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: var(--font-serif);
     font-size: 0.95rem;
     font-weight: 400;
     letter-spacing: 0;
@@ -350,7 +351,7 @@ p {
 }
 
 .media-page .media-date {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: var(--font-serif);
     font-size: 0.92rem;
     font-style: italic;
     color: var(--text-muted);
@@ -360,7 +361,7 @@ p {
 
 .media-page .media-headline {
     display: block;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: var(--font-serif);
     font-size: 1.08rem;
     font-weight: 400;
     font-style: italic;
@@ -393,7 +394,7 @@ p {
     border-bottom: 2px solid var(--accent-sky-strong);
     background: none;
     background-color: transparent;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: var(--font-serif);
     font-size: 1.2rem;
     font-weight: 700;
     line-height: 1.3;
@@ -407,7 +408,7 @@ p {
 
 .teaching-page .teaching-role {
     margin: 0 0 0.5rem;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: var(--font-serif);
     font-size: 1.05rem;
     color: var(--text-muted);
 }
@@ -465,17 +466,17 @@ p {
 
 .teaching-page .teaching-tutorial-sub {
     margin-top: 0.35rem;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: var(--font-serif);
     line-height: 1.45;
     color: var(--text-muted);
 }
 
 .rightside_image {
   float: left;
-  margin: 0.2rem 1rem 0.85rem 0;
+  margin: 0.2rem 1.25rem 0.85rem 0;
   /* Square frame: tall originals are cropped, not stretched */
-  width: min(200px, 36vw);
-  height: min(200px, 36vw);
+  width: min(240px, 40vw);
+  height: min(240px, 40vw);
   object-fit: cover;
   object-position: center 28%;
   border-radius: 8px;
@@ -500,7 +501,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: var(--font-serif);
     font-weight: 400;
     font-size: 1.18rem;
     line-height: 1.58;
@@ -546,8 +547,8 @@ ul {
         float: none;
         display: block;
         margin: 0 auto 1.25rem;
-        width: min(170px, 52vw);
-        height: min(170px, 52vw);
+        width: min(200px, 55vw);
+        height: min(200px, 55vw);
     }
 
     .paper-note {
