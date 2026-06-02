@@ -291,16 +291,24 @@ p {
     line-height: 1.42;
 }
 
-.research-page p:has(> h3) ~ p:has(> h3) {
-    margin-top: 6.5rem;
+.research-page .research-section + .research-section {
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--accent-border);
 }
 
-.research-page p:has(> h3) {
-    margin-bottom: 0;
-}
-
-.research-page p:has(> h3) + p {
-    margin-top: 0.25rem;
+.research-page .research-section-title {
+    display: block;
+    margin: 0 0 0.85rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--accent-sky-strong);
+    background: none;
+    font-family: var(--font-serif);
+    font-size: var(--text-section);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    color: var(--text);
 }
 
 .media-page {
