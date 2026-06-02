@@ -291,20 +291,6 @@ p {
     line-height: 1.42;
 }
 
-.page-section-title {
-    display: block;
-    margin: 0 0 0.85rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 2px solid var(--accent-sky-strong);
-    background: none;
-    font-family: var(--font-serif);
-    font-size: var(--text-section);
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: 0.01em;
-    color: var(--text);
-}
-
 .teaching-page .teaching-school-title {
     display: block;
     margin: 1.85rem 0 0.5rem;
@@ -327,6 +313,11 @@ p {
 .research-page .research-section + .research-section {
     margin-top: 2.5rem;
 }
+.research-page .research-section > h3,
+.media-page > h3 {
+    margin: 0 0 0.85rem;
+}
+
 
 .media-page {
     max-width: 56rem;
