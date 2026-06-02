@@ -291,10 +291,20 @@ p {
     line-height: 1.42;
 }
 
-.page-section-title {
+.research-page {
+    max-width: 56rem;
+}
+
+.research-section:not(:first-child) {
+    margin-top: 2.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--accent-border);
+}
+
+.research-section-title {
     display: block;
-    margin: 0 0 0.85rem;
-    padding-bottom: 0.4rem;
+    margin: 0 0 1.15rem;
+    padding-bottom: 0.45rem;
     border-bottom: 2px solid var(--accent-sky-strong);
     background: none;
     font-family: var(--font-serif);
@@ -305,33 +315,13 @@ p {
     color: var(--text);
 }
 
-.home-news {
-    margin-top: 2.5rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--accent-border);
+.research-page .paper-entry {
+    margin: 0 0 1.75rem;
+    line-height: 1.58;
 }
 
-.teaching-page .teaching-school-title {
-    display: block;
-    margin: 1.85rem 0 0.5rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 2px solid var(--accent-sky-strong);
-    background: none;
-    background-color: transparent;
-    font-family: var(--font-serif);
-    font-size: var(--text-subsection);
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: 0.01em;
-    color: var(--text);
-}
-
-.teaching-page .teaching-school-title:first-of-type {
-    margin-top: 0.85rem;
-}
-
-.research-page .research-section + .research-section {
-    margin-top: 2.5rem;
+.research-page .paper-entry:last-child {
+    margin-bottom: 0;
 }
 
 .media-page {
@@ -339,7 +329,7 @@ p {
 }
 
 .media-page .media-page-intro {
-    margin-top: 0.35rem;
+    margin-top: 1.1rem;
     margin-bottom: 1.35rem;
     color: var(--text-muted);
     font-size: inherit;
@@ -440,7 +430,24 @@ p {
     max-width: 56rem;
 }
 
+.teaching-page .teaching-school-title {
+    display: block;
+    margin: 1.85rem 0 0.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--accent-sky-strong);
+    background: none;
+    background-color: transparent;
+    font-family: var(--font-serif);
+    font-size: var(--text-subsection);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    color: var(--text);
+}
 
+.teaching-page .teaching-school-title:first-of-type {
+    margin-top: 0.85rem;
+}
 
 .teaching-page .teaching-role {
     margin: 0 0 0.5rem;
