@@ -292,7 +292,7 @@ p {
 }
 
 .research-page p:has(> h3) ~ p:has(> h3) {
-    margin-top: 5.25rem;
+    margin-top: 6.5rem;
 }
 
 .media-page {
