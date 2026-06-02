@@ -305,12 +305,13 @@ p {
     color: var(--text);
 }
 
-.page-subsection-title {
+.teaching-page .teaching-school-title {
     display: block;
     margin: 1.85rem 0 0.5rem;
     padding-bottom: 0.4rem;
     border-bottom: 2px solid var(--accent-sky-strong);
     background: none;
+    background-color: transparent;
     font-family: var(--font-serif);
     font-size: var(--text-subsection);
     font-weight: 700;
@@ -319,8 +320,8 @@ p {
     color: var(--text);
 }
 
-.page-subsection-title:first-of-type {
-    margin-top: 0.5rem;
+.teaching-page .teaching-school-title:first-of-type {
+    margin-top: 0.85rem;
 }
 
 .research-page .research-section + .research-section {
