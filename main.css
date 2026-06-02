@@ -291,6 +291,10 @@ p {
     line-height: 1.42;
 }
 
+.research-page p:has(> h3) ~ p:has(> h3) {
+    margin-top: 2.5rem;
+}
+
 .media-page {
     max-width: 56rem;
 }
