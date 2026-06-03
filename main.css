@@ -16,10 +16,8 @@
     --accent-nav-active: #d1e6fc;
     --accent-nav-active-hover: #c5def9;
     --focus-ring: #2a6fbf;
-    /* Paper meta lines: venue (teal-sage), media (blue), awards (magenta) — same block layout */
-    --note-venue-fg: #3d5249;
+    /* Paper meta lines: venue (body text + green rule), media (blue), awards (magenta) */
     --note-venue-border: #6fa894;
-    --note-venue-link: #256b52;
     --note-award-fg: #a31d72;
     --note-award-border: #c75b96;
     --note-award-link: #7d1858;
@@ -225,7 +223,7 @@ p {
     color: var(--text);
 }
 
-/* Secondary lines: default = venue/conference (cool slate); add .paper-note-media or .paper-note-award */
+/* Secondary lines: default = venue/conference (same text as paper body); add .paper-note-media or .paper-note-award */
 .paper-note {
     display: block;
     margin: 0.2rem 0 0;
@@ -235,14 +233,10 @@ p {
     font-family: var(--font-serif);
     font-size: var(--text-note);
     line-height: 1.38;
-    color: var(--note-venue-fg);
+    color: var(--text);
 }
 
 .paper-note a {
-    color: var(--note-venue-link);
-}
-
-.paper-note a:hover {
     color: var(--link);
 }
 
@@ -311,27 +305,37 @@ p {
     border-top: 1px solid var(--accent-border);
 }
 
-.teaching-page .teaching-school-title {
+.research-page {
+    max-width: 56rem;
+}
+
+.research-section:not(:first-child) {
+    margin-top: 2.75rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--accent-border);
+}
+
+.research-section-title {
     display: block;
-    margin: 1.85rem 0 0.5rem;
-    padding-bottom: 0.4rem;
+    margin: 0 0 1.15rem;
+    padding-bottom: 0.45rem;
     border-bottom: 2px solid var(--accent-sky-strong);
     background: none;
-    background-color: transparent;
     font-family: var(--font-serif);
-    font-size: var(--text-subsection);
+    font-size: var(--text-section);
     font-weight: 700;
     line-height: 1.3;
     letter-spacing: 0.01em;
     color: var(--text);
 }
 
-.teaching-page .teaching-school-title:first-of-type {
-    margin-top: 0.85rem;
+.research-page .paper-entry {
+    margin: 0 0 1.75rem;
+    line-height: 1.58;
 }
 
-.research-page .research-section + .research-section {
-    margin-top: 2.5rem;
+.research-page .paper-entry:last-child {
+    margin-bottom: 0;
 }
 
 .media-page {
@@ -339,7 +343,7 @@ p {
 }
 
 .media-page .media-page-intro {
-    margin-top: 0.35rem;
+    margin-top: 1.1rem;
     margin-bottom: 1.35rem;
     color: var(--text-muted);
     font-size: inherit;
@@ -440,7 +444,24 @@ p {
     max-width: 56rem;
 }
 
+.teaching-page .teaching-school-title {
+    display: block;
+    margin: 1.85rem 0 0.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--accent-sky-strong);
+    background: none;
+    background-color: transparent;
+    font-family: var(--font-serif);
+    font-size: var(--text-subsection);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    color: var(--text);
+}
 
+.teaching-page .teaching-school-title:first-of-type {
+    margin-top: 0.85rem;
+}
 
 .teaching-page .teaching-role {
     margin: 0 0 0.5rem;
