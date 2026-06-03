@@ -310,8 +310,6 @@ p {
 
 .research-section:not(:first-child) {
     margin-top: 2.75rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--accent-border);
 }
 
 .research-section-title {
