@@ -312,6 +312,11 @@ p {
     margin-top: 2.75rem;
 }
 
+.research-section:not(:first-child) .research-section-title {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
 .research-section-title {
     display: block;
     margin: 0 0 1.15rem;
