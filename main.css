@@ -313,12 +313,14 @@ p {
     margin-top: 2.75rem;
 }
 
-.research-section-title {
+.research-page h3.research-section-title {
     display: block;
     margin: 0 0 1.15rem;
     padding-bottom: 0.45rem;
     border-bottom: 2px solid var(--accent-sky-strong);
     background: none;
+    background-color: transparent;
+    background-image: none;
     font-family: var(--font-serif);
     font-size: var(--text-section);
     font-weight: 700;
