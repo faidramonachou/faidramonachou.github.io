@@ -17,6 +17,7 @@
     --accent-nav-active-hover: #c5def9;
     --focus-ring: #2a6fbf;
     /* Paper meta lines: venue (body text + gray rule), media (blue), awards (magenta) */
+    --note-venue-border: #b0bcc8;
     --note-award-fg: #a31d72;
     --note-award-border: #c75b96;
     --note-award-link: #7d1858;
@@ -228,7 +229,7 @@ p {
     margin: 0.2rem 0 0;
     padding: 0.15rem 0 0.15rem 0.85rem;
     margin-left: 0.1rem;
-    border-left: 2px solid var(--accent-border);
+    border-left: 2px solid var(--note-venue-border);
     font-family: var(--font-serif);
     font-size: var(--text-note);
     line-height: 1.38;
@@ -310,11 +311,6 @@ p {
 
 .research-section:not(:first-child) {
     margin-top: 2.75rem;
-}
-
-.research-section:not(:first-child) .research-section-title {
-    border-bottom: none;
-    padding-bottom: 0;
 }
 
 .research-section-title {
