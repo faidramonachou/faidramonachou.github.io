@@ -305,10 +305,6 @@ p {
     border-top: 1px solid var(--accent-border);
 }
 
-.research-page {
-    max-width: 68rem;
-}
-
 .research-section:not(:first-child) {
     margin-top: 2.75rem;
 }
