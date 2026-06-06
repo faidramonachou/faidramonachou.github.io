@@ -347,6 +347,17 @@ p {
     padding: 0;
 }
 
+.media-page .media-item-top {
+    margin-bottom: 0.4rem;
+}
+
+.media-page .media-date::before {
+    content: "·";
+    margin: 0 0.45em;
+    font-style: normal;
+    color: var(--text-muted);
+}
+
 .media-page .media-item {
     padding: 0.95rem 0;
     border-bottom: 1px solid var(--accent-border);
@@ -359,15 +370,6 @@ p {
 .media-page .media-item:last-child {
     border-bottom: none;
     padding-bottom: 0.25rem;
-}
-
-.media-page .media-item-top {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 0.35rem 1rem;
-    margin-bottom: 0.4rem;
 }
 
 .media-page .media-outlet {
@@ -404,7 +406,6 @@ p {
     font-size: var(--text-sm);
     font-style: italic;
     color: var(--text-muted);
-    margin-left: auto;
     white-space: nowrap;
 }
 
@@ -473,11 +474,6 @@ p {
 }
 
 .teaching-page ul.teaching-list li {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 0.25rem 1rem;
     margin: 0 0 0.45rem;
     padding-left: 0.25rem;
 }
@@ -486,11 +482,17 @@ p {
     margin-bottom: 0;
 }
 
+.teaching-page ul.teaching-list .teaching-dates::before {
+    content: "·";
+    margin: 0 0.45em;
+    font-style: normal;
+    color: var(--text-muted);
+}
+
 .teaching-page ul.teaching-list .teaching-dates {
     font-style: italic;
     color: var(--text-muted);
-    margin-left: auto;
-    text-align: right;
+    white-space: nowrap;
 }
 
 .teaching-page ul.teaching-list li.teaching-list-item--tutorial {
@@ -498,15 +500,11 @@ p {
 }
 
 .teaching-page .teaching-tutorial-head {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 0.25rem 1rem;
+    margin-bottom: 0;
 }
 
 .teaching-page .teaching-tutorial-head .teaching-dates {
-    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .teaching-page .teaching-tutorial-sub {
